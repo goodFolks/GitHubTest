@@ -27,6 +27,7 @@ namespace PhoneApp1._1__H
             client = new Service1Client();
             int x;
             int fafasfasd;
+            int bastiIsGay;
         }
 
         private void signUp_Click(object sender, RoutedEventArgs e)
