@@ -24,12 +24,9 @@ namespace PhoneApp1._1__H
         public MainPage()
         {
             InitializeComponent();
-            string bobo;
+            
             client = new Service1Client();
-            int x;
-            int fafasfasd;
-            int bastiIsGay;
-            string bulhawa = "cunt";
+            
         }
 
         private void signUp_Click(object sender, RoutedEventArgs e)
