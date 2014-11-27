@@ -24,6 +24,7 @@ namespace PhoneApp1._1__H
         public MainPage()
         {
             InitializeComponent();
+            string bobo;
             client = new Service1Client();
             int x;
             int fafasfasd;
