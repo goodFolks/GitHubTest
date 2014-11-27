@@ -1,0 +1,35 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PhoneApp1._1__H.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:CS.Windows.Controls;assembly=CS.Windows.Controls"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Border BorderBrush="Gray" BorderThickness="5">
+        <StackPanel Background="#A2c400">
+            <Image Source="/images/Lime-A2C400.png" Margin="0,50" Visibility="Visible" />
+            <Controls:WatermarkTextBox x:Name="userTxt" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Username or Email" Background="#FFEFFFD6" Foreground="#FF959595"></Controls:WatermarkTextBox>
+            <Controls:WatermarkPasswordBox x:Name="userPass" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Password" Background="#FFEFFFD6" FocusedForeground="Black" Foreground="#FF959595" SelectionBackground="#FF254C5F"></Controls:WatermarkPasswordBox>
+            <Button Content="Sign in " FontSize="30" Tap="Button_Tap"   ></Button>
+            <HyperlinkButton x:Name="fpass" Content="Forgot Password?" Click="fpass_Click" Foreground="Gray" FontWeight="ExtraBold" FontSize="20"></HyperlinkButton>
+            <TextBlock Text="You don't have an account?" FontWeight="ExtraBold" Foreground="Gray" FontSize="20" Margin="0,130,0,0" TextAlignment="Center"></TextBlock>
+            <HyperlinkButton x:Name="signUp" FontSize="25" Content="Tap here to Sign Up!" Margin="0,10,0,0" Click="signUp_Click"></HyperlinkButton>
+        </StackPanel>        
+</Border>
+    
+    
+    
+    
+    
+    
+</phone:PhoneApplicationPage>
