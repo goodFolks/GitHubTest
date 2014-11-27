@@ -25,6 +25,8 @@ namespace PhoneApp1._1__H
         {
             InitializeComponent();
             client = new Service1Client();
+            int x;
+            int fafasfasd;
         }
 
         private void signUp_Click(object sender, RoutedEventArgs e)
