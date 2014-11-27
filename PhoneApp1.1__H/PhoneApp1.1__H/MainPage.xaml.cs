@@ -28,6 +28,7 @@ namespace PhoneApp1._1__H
             int x;
             int fafasfasd;
             int bastiIsGay;
+            string basti = "noob";
         }
 
         private void signUp_Click(object sender, RoutedEventArgs e)
