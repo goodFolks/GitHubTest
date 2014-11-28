@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README_FIRST.txt" />
+    <None Include="Service References\myService\Service1.disco" />
     <None Include="Service References\myService\Service11.disco" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
@@ -188,7 +189,17 @@
     <Content Include="ServiceReferences.ClientConfig">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Service References\myService\Service1.wsdl" />
+    <None Include="Service References\myService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\myService\Service11.wsdl" />
+    <None Include="Service References\myService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\myService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\myService\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
