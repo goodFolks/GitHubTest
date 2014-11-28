@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using PhoneApp1._1__H.myService;
 using Microsoft.Phone.Shell;
+using System.Text.RegularExpressions;
 
 
 
@@ -26,6 +27,7 @@ namespace PhoneApp1._1__H
             InitializeComponent();
             
             client = new Service1Client();
+           
             
             
         }
@@ -54,6 +56,7 @@ namespace PhoneApp1._1__H
 
         void client_AuthenticateCompleted(object sender, AuthenticateCompletedEventArgs e)
         {
+            client.AuthenticateCompleted -= client_AuthenticateCompleted;
             if (e.Result != -1)
             {
                 userId = e.Result;
@@ -65,8 +68,8 @@ namespace PhoneApp1._1__H
 
             else
             {
-                MessageBox.Show("User Not Found");
-                client.AuthenticateCompleted -= client_AuthenticateCompleted;//remove the stack call from the service.
+                MessageBox.Show("Please check your account information","Oops, something went wrong",MessageBoxButton.OK);
+             //remove the stack call from the service.
             }
 
             
@@ -83,7 +86,7 @@ namespace PhoneApp1._1__H
 
         private void Button_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            string userName = userTxt.Text;
+            string userName = userTxt.Text.ToLower();
             string userPassword = userPass.Password;
             UserAuth user = new UserAuth();
             user.Password = userPassword;
