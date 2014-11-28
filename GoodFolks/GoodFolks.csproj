@@ -99,11 +99,10 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50570</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50570/</IISUrl>
+          <IISUrl>http://192.168.1.4:50570/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl>http://dantedemon89.ddns.net:50570/GoodFolks/GoodFolks/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README_FIRST.txt" />
+    <None Include="Service References\myService\Service11.disco" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
@@ -184,19 +185,19 @@
     <None Include="Service References\myService\PhoneApp1._1__H.myService.Post.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\myService\Service1.wsdl" />
-    <None Include="Service References\myService\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\myService\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\myService\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="ServiceReferences.ClientConfig">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Service References\myService\Service11.wsdl" />
+    <None Include="Service References\myService\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\myService\Service131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\myService\Service132.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
@@ -220,7 +221,6 @@
     <Content Include="images\volunteerwork1.jpg" />
     <Content Include="images\volunteerwork2.jpg" />
     <Content Include="images\volunteerwork3.jpg" />
-    <None Include="Service References\myService\Service1.disco" />
     <None Include="Service References\myService\configuration91.svcinfo" />
     <None Include="Service References\myService\configuration.svcinfo" />
     <None Include="Service References\myService\Reference.svcmap">
