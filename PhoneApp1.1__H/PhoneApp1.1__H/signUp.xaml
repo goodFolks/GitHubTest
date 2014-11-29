@@ -26,13 +26,31 @@
                 <TextBlock  TextWrapping="Wrap" Text="Please fill out your information and welcome to GoodFolks!" FontSize="30" Height="85" Width="458" Margin="10,0"/>
                 <StackPanel Margin="0,10">
                     
-                  <Controls:WatermarkTextBox x:Name="userTxt" BorderThickness="4"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F" WatermarkText="Username"/>
+                    <Controls:WatermarkTextBox x:Name="userTxt" BorderThickness="4"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F" WatermarkText="Username"/>
+                    <TextBlock x:Name="emptyUser" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+                    <TextBlock x:Name="existUser" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*User name or email already exists"  TextAlignment="Center"></TextBlock>
+
                     <Controls:WatermarkPasswordBox x:Name="passTxt" Foreground="#FF666666" BorderBrush="#B9B9B9" WatermarkText="Password" BorderThickness="4" Background="#FFEFFFD6" />
+                    <TextBlock x:Name="emptyPass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+                    <TextBlock x:Name="invalidPass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Password has to be at least 6 characters containing at least one uppercase letter" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+
                     <Controls:WatermarkPasswordBox x:Name="passTxtConf" Foreground="#FF666666" BorderBrush="#B9B9B9"  WatermarkText="Re-enter Password" Background="#FFEFFFD6" />
+                    <TextBlock x:Name="emptyRePass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+                    <TextBlock x:Name="mismatchPass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Your Passwords don't match" TextAlignment="Center"></TextBlock>
+
                     <Controls:WatermarkTextBox x:Name="emailTxt" BorderThickness="4"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F"  WatermarkText="Email"/>
+                    <TextBlock x:Name="emptyEmail" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+                    <TextBlock x:Name="invalidEmail" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Invalid email format" TextAlignment="Center"></TextBlock>
+
                     <Controls:WatermarkTextBox x:Name="fName" BorderThickness="4"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F" WatermarkText="First Name"/>
+                    <TextBlock x:Name="emptyFname" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+
                     <Controls:WatermarkTextBox x:Name="lName" BorderThickness="4"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F" WatermarkText="Last Name"/>
-                    <toolkit:DatePicker x:Name="bDate" BorderThickness="4" BorderBrush="#B9B9B9" Foreground="#B9B9B9"   Height="80" Background="#FFEFFFD6" ValueStringFormat="Birthdate" Tap="bDate_Tap"/> 
+                    <TextBlock x:Name="emptyLname" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+
+                    <toolkit:DatePicker x:Name="bDate" BorderThickness="4" BorderBrush="#B9B9B9" Foreground="#B9B9B9"   Height="80" Background="#FFEFFFD6" ValueStringFormat="Birthdate" Tap="bDate_Tap"/>
+                    <TextBlock x:Name="emptyBdate" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+
                     <Border BorderBrush="Gray" BorderThickness="2" ></Border>
                     <StackPanel Orientation="Horizontal" Margin="-8" >
                         <TextBlock Text="Gender:" FontSize="33" Margin="15" Width="119"/>
@@ -56,7 +74,8 @@
                     </Grid>
                     <Border BorderBrush="Gray" BorderThickness="2" Margin="0,27"></Border>
 
-                    <Button Content="Create Account" FontSize="30" Margin="0,-15,0,0" Tap="Button_Tap"/>
+                    <TextBlock x:Name="emptyRadio" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*You are missing some options" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,-21,0,0" />
+                    <Button Content="Create Account" FontSize="30" Margin="0,-13,0,0" Tap="Button_Tap"/>
                     <ScrollBar/>
                 </StackPanel>
             </StackPanel>
