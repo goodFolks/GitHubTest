@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="" />
-  <App xmlns="" ProductID="{cdaab0fe-bf8a-4393-9701-fdc103bda47d}" Title="PhoneApp1._1__H" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PhoneApp1._1__H author" Description="Sample description" Publisher="PhoneApp1._1__H" PublisherID="{a9bbac32-2638-483e-a3a2-a6892f91e5f5}">
+  <App xmlns="" ProductID="{cdaab0fe-bf8a-4393-9701-fdc103bda47d}" Title="GoodFolks" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PhoneApp1._1__H author" Description="Sample description" Publisher="PhoneApp1._1__H" PublisherID="{a9bbac32-2638-483e-a3a2-a6892f91e5f5}">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />
@@ -37,9 +37,13 @@
           </BackBackgroundImageURI>
           <BackTitle>
           </BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">images\Lime-A2C400.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">
+          </LargeBackBackgroundImageURI>
           <DeviceLockImageURI>
           </DeviceLockImageURI>
-          <HasLarge>false</HasLarge>
+          <HasLarge>True</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

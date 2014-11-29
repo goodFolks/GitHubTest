@@ -40,7 +40,7 @@
 
     <Border BorderBrush="Gray" BorderThickness="5">
 
-        <Grid x:Name="LayoutRoot" Background="BlueViolet">
+        <Grid x:Name="LayoutRoot" Background="#A2c400">
             
             <controls:Pivot >
                 <controls:Pivot.Title >
