@@ -41,7 +41,7 @@ namespace PhoneApp1._1__H
 {
     public partial class signUp : PhoneApplicationPage
     {
-        Service1Client client;
+        Service1Client client;     
         public signUp()
         {
             InitializeComponent();
