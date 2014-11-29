@@ -83,14 +83,14 @@ namespace PhoneApp1._1__H
                 newUser.UserTimeCreated = DateTime.Now;
 
 
-               // client.newUserAsync(newUser);
-             //   client.newUserCompleted += client_newUserCompleted;
-            //    MessageBoxResult result = MessageBox.Show("Welcome to goodfolks , now you can sign in with your username", "Congratulations", MessageBoxButton.OK);
-            
-          //  if(result == MessageBoxResult.OK)
-            //{
-         //       NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
-            //}
+                client.newUserAsync(newUser);
+                client.newUserCompleted += client_newUserCompleted;
+                MessageBoxResult result = MessageBox.Show("Welcome to goodfolks , now you can sign in with your username", "Congratulations", MessageBoxButton.OK);
+
+                if (result == MessageBoxResult.OK)
+            {
+               NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            }
              
         }
 
