@@ -1,0 +1,88 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp1._1__H.notifications"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:PhoneApp1._1__H"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        
+        <Storyboard x:Name="myStoryboard">
+            <DoubleAnimation Storyboard.TargetName="trans"  Storyboard.TargetProperty="Y" From="700"
+                         To="0" Duration="0:0:.4"/>
+            <DoubleAnimation Storyboard.TargetName="rota"  Storyboard.TargetProperty="Angle" From="90"
+                         To="0" Duration="0:0:.4"/>
+                   </Storyboard>
+        
+        
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    
+    
+        <Grid Background="#a2c400">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="43"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+        
+        <Grid Width="440">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="46"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel></StackPanel>
+            <TextBlock Text="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom"></TextBlock>
+            <Image x:Name="bell" Source="/Images/bellwhite.png" Width="43" Height="43" Grid.Column="2" HorizontalAlignment="Right" />
+        </Grid>
+
+        <TextBlock Text="Notifications" Foreground="White" FontSize="36" Margin="5,0,0,0" Grid.Row="1"/>
+        
+        <ListBox Background="Beige" x:Name="mylist" BorderBrush="Gray" BorderThickness="1" Margin="0,4,0,0" Grid.Row="2">
+              <ListBox.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform x:Name="trans"/>
+                        <RotateTransform x:Name="rota"/>
+                    </TransformGroup>
+                </ListBox.RenderTransform>
+           
+            <ListBox.ItemTemplate>
+                    <DataTemplate>
+                    <StackPanel>
+                        <Grid Height="122" Width="479">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderBrush="Gray" BorderThickness="2" HorizontalAlignment="Center" Width="90" Height="90"  VerticalAlignment="Center">
+                                <Image x:Name="userImage" Source="{Binding Path=UserImage}"  Stretch="UniformToFill"></Image>
+                            </Border>
+                            <Border BorderBrush="Gray" BorderThickness="2" Grid.Column="2" HorizontalAlignment="Center" Width="90" Height="90" VerticalAlignment="Center">
+                                <Image x:Name="postImage" Source="{Binding Path=PostImage}" Grid.Column="2" Stretch="UniformToFill" ></Image>
+                            </Border>
+                            <TextBlock x:Name="postType" Grid.Column="1"   Margin="3,15,0,0" TextWrapping="Wrap">
+                            <Run Text="{Binding Path=PostWords}" Foreground="Gray"  FontSize="21" FontWeight="Bold" ></Run>
+                            <Run Text="Saluted your achievment!" FontSize="21" Foreground="Gray"></Run>
+                            </TextBlock>
+                            <TextBlock x:Name="postDate" Text="{Binding Path=Date}" Margin="3,80,0,0" Grid.Column="1" Foreground="Gray" FontSize="15" TextDecorations="UnderLine"></TextBlock>
+                        </Grid>
+                        <Border BorderBrush="Gray" BorderThickness="1" Width="430" Opacity=".1"></Border>
+                    </StackPanel>
+                        
+                </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    
+    
+</phone:PhoneApplicationPage>

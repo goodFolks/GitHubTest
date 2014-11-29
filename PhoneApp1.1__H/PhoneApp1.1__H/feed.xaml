@@ -52,7 +52,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Goodfolks"/>
                         <TextBlock Text="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom"></TextBlock>
-                        <Image Source="/Images/bellwhite.png" Width="43" Height="43" Grid.Column="2" HorizontalAlignment="Right"/>
+                        <Image Source="/Images/bellwhite.png" Width="43" Height="43" Grid.Column="2" HorizontalAlignment="Right" Tap="Image_Tap"/>
                     </Grid>
                 </controls:Pivot.Title>
                 <controls:PivotItem  Margin="14,23,10,5">

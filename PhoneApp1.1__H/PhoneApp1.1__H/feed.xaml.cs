@@ -57,6 +57,11 @@ namespace PhoneApp1._1__H
            
         }
 
+        private void Image_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/notifications.xaml",UriKind.RelativeOrAbsolute));
+        }
+
     }
 
     public class ByetConverter : IValueConverter
