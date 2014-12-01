@@ -212,66 +212,6 @@ namespace PhoneApp1._1__H.myService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="UserAuth", Namespace="http://schemas.datacontract.org/2004/07/GoodFolks")]
-    public partial class UserAuth : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string PasswordField;
-        
-        private int UserIdField;
-        
-        private string UserNameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserId {
-            get {
-                return this.UserIdField;
-            }
-            set {
-                if ((this.UserIdField.Equals(value) != true)) {
-                    this.UserIdField = value;
-                    this.RaisePropertyChanged("UserId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Post", Namespace="http://schemas.datacontract.org/2004/07/GoodFolks")]
     public partial class Post : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -421,6 +361,66 @@ namespace PhoneApp1._1__H.myService {
                 if ((object.ReferenceEquals(this.userNameField, value) != true)) {
                     this.userNameField = value;
                     this.RaisePropertyChanged("userName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserAuth", Namespace="http://schemas.datacontract.org/2004/07/GoodFolks")]
+    public partial class UserAuth : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string PasswordField;
+        
+        private int UserIdField;
+        
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
                 }
             }
         }
@@ -594,6 +594,11 @@ namespace PhoneApp1._1__H.myService {
         
         bool EndnewUser(System.IAsyncResult result);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/newPost", ReplyAction="http://tempuri.org/IService1/newPostResponse")]
+        System.IAsyncResult BeginnewPost(PhoneApp1._1__H.myService.Post newPost, System.AsyncCallback callback, object asyncState);
+        
+        bool EndnewPost(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/Authenticate", ReplyAction="http://tempuri.org/IService1/AuthenticateResponse")]
         System.IAsyncResult BeginAuthenticate(PhoneApp1._1__H.myService.UserAuth user, System.AsyncCallback callback, object asyncState);
         
@@ -651,6 +656,25 @@ namespace PhoneApp1._1__H.myService {
         private object[] results;
         
         public newUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class newPostCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public newPostCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -844,6 +868,12 @@ namespace PhoneApp1._1__H.myService {
         
         private System.Threading.SendOrPostCallback onnewUserCompletedDelegate;
         
+        private BeginOperationDelegate onBeginnewPostDelegate;
+        
+        private EndOperationDelegate onEndnewPostDelegate;
+        
+        private System.Threading.SendOrPostCallback onnewPostCompletedDelegate;
+        
         private BeginOperationDelegate onBeginAuthenticateDelegate;
         
         private EndOperationDelegate onEndAuthenticateDelegate;
@@ -953,6 +983,8 @@ namespace PhoneApp1._1__H.myService {
         
         public event System.EventHandler<newUserCompletedEventArgs> newUserCompleted;
         
+        public event System.EventHandler<newPostCompletedEventArgs> newPostCompleted;
+        
         public event System.EventHandler<AuthenticateCompletedEventArgs> AuthenticateCompleted;
         
         public event System.EventHandler<ForgotPasswordCompletedEventArgs> ForgotPasswordCompleted;
@@ -1019,6 +1051,52 @@ namespace PhoneApp1._1__H.myService {
             }
             base.InvokeAsync(this.onBeginnewUserDelegate, new object[] {
                         newUser}, this.onEndnewUserDelegate, this.onnewUserCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult PhoneApp1._1__H.myService.IService1.BeginnewPost(PhoneApp1._1__H.myService.Post newPost, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginnewPost(newPost, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool PhoneApp1._1__H.myService.IService1.EndnewPost(System.IAsyncResult result) {
+            return base.Channel.EndnewPost(result);
+        }
+        
+        private System.IAsyncResult OnBeginnewPost(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            PhoneApp1._1__H.myService.Post newPost = ((PhoneApp1._1__H.myService.Post)(inValues[0]));
+            return ((PhoneApp1._1__H.myService.IService1)(this)).BeginnewPost(newPost, callback, asyncState);
+        }
+        
+        private object[] OnEndnewPost(System.IAsyncResult result) {
+            bool retVal = ((PhoneApp1._1__H.myService.IService1)(this)).EndnewPost(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnnewPostCompleted(object state) {
+            if ((this.newPostCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.newPostCompleted(this, new newPostCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void newPostAsync(PhoneApp1._1__H.myService.Post newPost) {
+            this.newPostAsync(newPost, null);
+        }
+        
+        public void newPostAsync(PhoneApp1._1__H.myService.Post newPost, object userState) {
+            if ((this.onBeginnewPostDelegate == null)) {
+                this.onBeginnewPostDelegate = new BeginOperationDelegate(this.OnBeginnewPost);
+            }
+            if ((this.onEndnewPostDelegate == null)) {
+                this.onEndnewPostDelegate = new EndOperationDelegate(this.OnEndnewPost);
+            }
+            if ((this.onnewPostCompletedDelegate == null)) {
+                this.onnewPostCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnnewPostCompleted);
+            }
+            base.InvokeAsync(this.onBeginnewPostDelegate, new object[] {
+                        newPost}, this.onEndnewPostDelegate, this.onnewPostCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1517,6 +1595,19 @@ namespace PhoneApp1._1__H.myService {
             public bool EndnewUser(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 bool _result = ((bool)(base.EndInvoke("newUser", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginnewPost(PhoneApp1._1__H.myService.Post newPost, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = newPost;
+                System.IAsyncResult _result = base.BeginInvoke("newPost", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndnewPost(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("newPost", _args, result)));
                 return _result;
             }
             

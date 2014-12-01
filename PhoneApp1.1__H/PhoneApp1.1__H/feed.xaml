@@ -28,9 +28,9 @@
 
     </phone:PhoneApplicationPage.Resources>
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar BackgroundColor="Gray" Opacity="0.65" Mode="Minimized">
-            <shell:ApplicationBarIconButton Text="Post"    
-                  IconUri="/Images/ink.png"/>
+        <shell:ApplicationBar   BackgroundColor="Gray" Opacity="0.65" Mode="Minimized">
+            <shell:ApplicationBarIconButton   Text="Post"    
+                  IconUri="/Images/ink.png" Click="ApplicationBarIconButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" IsEnabled="True" Text="Refresh"/>
             <shell:ApplicationBarIconButton IconUri="/Assets1/AppBar/feature.settings.png" IsEnabled="True" Text="Settings"/>
 

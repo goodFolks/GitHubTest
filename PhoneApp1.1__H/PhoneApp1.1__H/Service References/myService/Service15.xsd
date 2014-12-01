@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/GoodFolks" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GoodFolks" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://dantedemon89.ddns.net:50570/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.1.4:50570/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="Member">
     <xs:sequence>
       <xs:element minOccurs="0" name="UserAdress" nillable="true" type="xs:string" />
@@ -18,6 +18,21 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Member" nillable="true" type="tns:Member" />
+  <xs:complexType name="Post">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Salutes" type="xs:int" />
+      <xs:element minOccurs="0" name="postId" type="xs:int" />
+      <xs:element minOccurs="0" name="postImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="postLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="postType" type="ser:char" />
+      <xs:element minOccurs="0" name="postUser" type="xs:int" />
+      <xs:element minOccurs="0" name="txtContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Post" nillable="true" type="tns:Post" />
   <xs:complexType name="UserAuth">
     <xs:sequence>
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
@@ -38,21 +53,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfPost" nillable="true" type="tns:ArrayOfPost" />
-  <xs:complexType name="Post">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Salutes" type="xs:int" />
-      <xs:element minOccurs="0" name="postId" type="xs:int" />
-      <xs:element minOccurs="0" name="postImage" nillable="true" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="postLocation" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="postTime" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="postType" type="ser:char" />
-      <xs:element minOccurs="0" name="postUser" type="xs:int" />
-      <xs:element minOccurs="0" name="txtContent" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="userImage" nillable="true" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Post" nillable="true" type="tns:Post" />
   <xs:complexType name="ArrayOfEvent">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />

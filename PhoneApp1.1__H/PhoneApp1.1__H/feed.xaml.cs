@@ -62,6 +62,11 @@ namespace PhoneApp1._1__H
             NavigationService.Navigate(new Uri("/notifications.xaml",UriKind.RelativeOrAbsolute));
         }
 
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/writePost.xaml", UriKind.Relative));
+        }
+
     }
 
     public class ByetConverter : IValueConverter
@@ -82,8 +87,8 @@ namespace PhoneApp1._1__H
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            Image image = value as Image;
-           BitmapImage myImage = image.Source as BitmapImage;
+
+            BitmapImage myImage = value as BitmapImage;
             MemoryStream ms = new MemoryStream();
             WriteableBitmap wi = new WriteableBitmap(myImage);
             wi.SaveJpeg(ms, myImage.PixelWidth, myImage.PixelHeight, 0, 100);

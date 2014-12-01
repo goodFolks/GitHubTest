@@ -181,6 +181,27 @@ namespace GoodFolks
         {
             throw new NotImplementedException();
         }
+
+
+        public bool newPost(Post newPost)
+        {
+            newConnection();
+            string query = "insert into post (post_user,post_txt,post_time,post_location,post_image) values(@UserID,@Text,@Time,@Location,@Image)";
+
+            com = new SqlCommand(query, con);
+            com.Parameters.Add("@UserID", SqlDbType.Int).Value = newPost.postUser;
+            com.Parameters.Add("@Text", SqlDbType.VarChar).Value = newPost.txtContent;
+            com.Parameters.Add("@Time", SqlDbType.DateTime).Value = newPost.postTime;
+            com.Parameters.Add("@Location", SqlDbType.VarChar).Value = newPost.postLocation;
+            com.Parameters.Add("@Image", SqlDbType.Image).Value = newPost.postImage;
+            int result = com.ExecuteNonQuery();
+            con.Close();
+            return result > 0;
+          
+               
+            
+            
+        }
     }
 
 }

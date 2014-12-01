@@ -18,6 +18,8 @@ namespace GoodFolks
 
         [OperationContract]
         bool newUser(Member newUser);
+        [OperationContract]
+        bool newPost(Post newPost);
 
         [OperationContract]
         int Authenticate(UserAuth user);

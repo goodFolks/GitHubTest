@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://dantedemon89.ddns.net:50570/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GoodFolks" />
+  <xs:import schemaLocation="http://192.168.1.4:50570/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GoodFolks" />
   <xs:element name="newUser">
     <xs:complexType>
       <xs:sequence>
@@ -15,10 +15,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="newPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="newPost" nillable="true" type="q2:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="newPostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="newPostResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Authenticate">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="user" nillable="true" type="q2:UserAuth" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="user" nillable="true" type="q3:UserAuth" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -53,7 +67,7 @@
   <xs:element name="getFriendListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getFriendListResult" nillable="true" type="q3:ArrayOfMember" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getFriendListResult" nillable="true" type="q4:ArrayOfMember" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -67,7 +81,7 @@
   <xs:element name="getMemberInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getMemberInfoResult" nillable="true" type="q4:Member" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getMemberInfoResult" nillable="true" type="q5:Member" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -95,7 +109,7 @@
   <xs:element name="getMyPostsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getMyPostsResult" nillable="true" type="q5:ArrayOfPost" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getMyPostsResult" nillable="true" type="q6:ArrayOfPost" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -109,7 +123,7 @@
   <xs:element name="getFriendsPostsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getFriendsPostsResult" nillable="true" type="q6:ArrayOfPost" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getFriendsPostsResult" nillable="true" type="q7:ArrayOfPost" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -121,7 +135,7 @@
   <xs:element name="getEventsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getEventsResult" nillable="true" type="q7:ArrayOfEvent" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getEventsResult" nillable="true" type="q8:ArrayOfEvent" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -133,7 +147,7 @@
   <xs:element name="getStrangerPostsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getStrangerPostsResult" nillable="true" type="q8:ArrayOfPost" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GoodFolks" minOccurs="0" name="getStrangerPostsResult" nillable="true" type="q9:ArrayOfPost" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

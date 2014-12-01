@@ -50,7 +50,7 @@
             </Controls:WatermarkTextBox>
             
             
-            <Button Content="Upload Photo" x:Name="uploadButton" Grid.Row="3" VerticalAlignment="Top">
+            <Button Content="Upload Photo" x:Name="uploadButton" Grid.Row="3" VerticalAlignment="Top" Tap="uploadButton_Tap">
                 <Button.RenderTransform>
                     <TranslateTransform x:Name="X"></TranslateTransform>
                 </Button.RenderTransform> 
@@ -58,7 +58,7 @@
 
 
             <Image Visibility="Collapsed" Source="images/volunteerwork2.jpg" Grid.Row="2" Width="440" Height="260" Stretch="UniformToFill"></Image>
-            <Button Content="Post" Grid.Row="3" x:Name="postButton" VerticalAlignment="Bottom">
+            <Button Content="Post" Grid.Row="3" x:Name="postButton" VerticalAlignment="Bottom" Tap="postButton_Tap" >
                 
                 
                 <Button.RenderTransform>
