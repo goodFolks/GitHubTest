@@ -20,8 +20,15 @@
     <Border BorderBrush="Gray" BorderThickness="5">
         <StackPanel Background="#A2c400">
             <Image Source="/images/Lime-A2C400.png" Margin="0,50" Visibility="Visible" />
+          
             <Controls:WatermarkTextBox x:Name="userTxt" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Username or Email" Background="#FFEFFFD6" Foreground="#FF959595"></Controls:WatermarkTextBox>
+            <TextBlock x:Name="emptyUser" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+
+            
             <Controls:WatermarkPasswordBox x:Name="userPass" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Password" Background="#FFEFFFD6" FocusedForeground="Black" Foreground="#FF959595" SelectionBackground="#FF254C5F"></Controls:WatermarkPasswordBox>
+            <TextBlock x:Name="emptyPass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
+            <TextBlock x:Name="wrongAcc" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Username or Password you entered is incorrect" TextAlignment="Center"></TextBlock>
+
             <Button Content="Sign in " FontSize="30" Tap="Button_Tap"   ></Button>
             <HyperlinkButton x:Name="fpass" Content="Forgot Password?" Click="fpass_Click" Foreground="Gray" FontWeight="ExtraBold" FontSize="20"></HyperlinkButton>
             <TextBlock Text="You don't have an account?" FontWeight="ExtraBold" Foreground="Gray" FontSize="20" Margin="0,130,0,0" TextAlignment="Center"></TextBlock>

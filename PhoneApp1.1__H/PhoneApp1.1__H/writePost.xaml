@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp1._1__H.writePost"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:CS.Windows.Controls;assembly=CS.Windows.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+
+        <Storyboard x:Name="myStoryboard">  
+            <DoubleAnimation Storyboard.TargetName="Y"  Storyboard.TargetProperty="Y" From="700" To="0" Duration="0:0:.4"/>
+            <DoubleAnimation Storyboard.TargetName="Ym"  Storyboard.TargetProperty="Y" From="-700" To="0" Duration="0:0:.4"/>
+            <DoubleAnimation Storyboard.TargetName="X"  Storyboard.TargetProperty="X" From="700"  To="0" Duration="0:0:.4"/>
+            <DoubleAnimation Storyboard.TargetName="Xm"  Storyboard.TargetProperty="X" From="-700" To="0" Duration="0:0:.4"/>
+        </Storyboard>
+
+    </phone:PhoneApplicationPage.Resources>
+   
+    <Grid x:Name="LayoutRoot" Background="#a2c400" >
+        <Grid Height="768">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="140" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+            
+            
+            <TextBlock Text="Post"  FontSize="110" TextDecorations="Underline" Margin="17,0,0,0">
+                <TextBlock.RenderTransform>
+                    <TranslateTransform x:Name="Ym"></TranslateTransform>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            
+
+            <Controls:WatermarkTextBox x:Name="postBox"  Grid.Row="1" Background="#FFEFFFD6" Foreground="#FF5F5F5F" WatermarkText="Share with us your achievment :)" TextWrapping="Wrap" BorderBrush="Gray" BorderThickness="3">
+                <Controls:WatermarkTextBox.RenderTransform>
+                        <TranslateTransform x:Name="Xm"></TranslateTransform>
+                    </Controls:WatermarkTextBox.RenderTransform>
+            </Controls:WatermarkTextBox>
+            
+            
+            <Button Content="Upload Photo" x:Name="uploadButton" Grid.Row="3" VerticalAlignment="Top">
+                <Button.RenderTransform>
+                    <TranslateTransform x:Name="X"></TranslateTransform>
+                </Button.RenderTransform> 
+            </Button>
+
+
+            <Image Visibility="Collapsed" Source="images/volunteerwork2.jpg" Grid.Row="2" Width="440" Height="260" Stretch="UniformToFill"></Image>
+            <Button Content="Post" Grid.Row="3" x:Name="postButton" VerticalAlignment="Bottom">
+                
+                
+                <Button.RenderTransform>
+                    <TranslateTransform x:Name="Y"></TranslateTransform>
+                </Button.RenderTransform>
+            </Button>
+            
+            
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
