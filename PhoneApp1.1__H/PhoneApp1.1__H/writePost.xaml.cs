@@ -47,6 +47,7 @@ namespace PhoneApp1._1__H
         {
             base.OnNavigatedTo(e);
             myStoryboard.Begin();
+            
             userId = (int)PhoneApplicationService.Current.State["CurrentUser"];
         }
         int userId;
@@ -55,8 +56,11 @@ namespace PhoneApp1._1__H
 
         void client_newPostCompleted(object sender, newPostCompletedEventArgs e)
         {
+            
             if (e.Result)
+            {
                 NavigationService.Navigate(new Uri("/feed.xaml", UriKind.Relative));
+            }
         }
 
         

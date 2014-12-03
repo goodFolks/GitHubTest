@@ -56,10 +56,12 @@ namespace PhoneApp1._1__H
 
         void client_AuthenticateCompleted(object sender, AuthenticateCompletedEventArgs e)
         {
+            bar.IsIndeterminate = false;
             client.AuthenticateCompleted -= client_AuthenticateCompleted;
             if (e.Result != -1)
             {
                 userId = e.Result;
+               
 
                 NavigationService.Navigate(new Uri("/feed.xaml", UriKind.Relative));
 
@@ -86,6 +88,7 @@ namespace PhoneApp1._1__H
 
         private void Button_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            bar.IsIndeterminate = true;
             string userName = userTxt.Text.ToLower();
             string userPassword = userPass.Password;
             UserAuth user = new UserAuth();
@@ -93,6 +96,11 @@ namespace PhoneApp1._1__H
             user.UserName = userName;
             client.AuthenticateAsync(user);
             client.AuthenticateCompleted += client_AuthenticateCompleted;
+        }
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+          
         }
     }
 }

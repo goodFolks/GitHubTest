@@ -28,7 +28,7 @@ namespace PhoneApp1._1__H
         {
             InitializeComponent();
             client = new Service1Client();
-            
+           
 
 
 
@@ -44,6 +44,7 @@ namespace PhoneApp1._1__H
             userId = (int)PhoneApplicationService.Current.State["CurrentUser"];
          client.getFriendsPostsAsync(userId);
          client.getFriendsPostsCompleted += client_getFriendsPostsCompleted;
+         bar.IsIndeterminate = true;
            
 
         }
@@ -51,6 +52,8 @@ namespace PhoneApp1._1__H
         void client_getFriendsPostsCompleted(object sender, getFriendsPostsCompletedEventArgs e)
         {
             listt.ItemsSource = e.Result;
+            bar.IsIndeterminate = false;
+           
            
             
            
@@ -65,6 +68,11 @@ namespace PhoneApp1._1__H
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/writePost.xaml", UriKind.Relative));
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/feed.xaml?" + DateTime.Now.Ticks, UriKind.Relative));
         }
 
     }
