@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodFolks", "GoodFolks\Good
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneApp1.1__H", "PhoneApp1.1__H\PhoneApp1.1__H\PhoneApp1.1__H.csproj", "{193E777D-0B38-4BC0-A5CA-85931A44ED15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_government_Application", "..\..\..\Desktop\app\M-government Application\M-government Application\M_government_Application.csproj", "{24F875EF-56FE-449A-923B-26D3EE64C56B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,24 @@ Global
 		{193E777D-0B38-4BC0-A5CA-85931A44ED15}.Release|x86.ActiveCfg = Release|x86
 		{193E777D-0B38-4BC0-A5CA-85931A44ED15}.Release|x86.Build.0 = Release|x86
 		{193E777D-0B38-4BC0-A5CA-85931A44ED15}.Release|x86.Deploy.0 = Release|x86
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|ARM.Build.0 = Debug|ARM
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|ARM.Deploy.0 = Debug|ARM
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|x86.ActiveCfg = Debug|x86
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|x86.Build.0 = Debug|x86
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Debug|x86.Deploy.0 = Debug|x86
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|ARM.ActiveCfg = Release|ARM
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|ARM.Build.0 = Release|ARM
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|ARM.Deploy.0 = Release|ARM
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|x86.ActiveCfg = Release|x86
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|x86.Build.0 = Release|x86
+		{24F875EF-56FE-449A-923B-26D3EE64C56B}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
