@@ -26,6 +26,7 @@
 
             
             <Controls:WatermarkPasswordBox x:Name="userPass" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Password" Background="#FFEFFFD6" FocusedForeground="Black" Foreground="#FF959595" SelectionBackground="#FF254C5F"></Controls:WatermarkPasswordBox>
+            <ProgressBar Background="#A2c400"  Foreground="Black" x:Name="bar" IsIndeterminate="False" ></ProgressBar>
             <TextBlock x:Name="emptyPass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
             <TextBlock x:Name="wrongAcc" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Username or Password you entered is incorrect" TextAlignment="Center"></TextBlock>
 
