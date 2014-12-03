@@ -39,7 +39,7 @@ namespace PhoneApp1._1__H
                 
                 imageBytes = ms.ToArray();
 
-              MessageBox.Show(imageBytes.Length+"");
+            
             }
         }
         byte[] imageBytes;

@@ -20,14 +20,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.1.4:50570/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="ce7e9975-91ec-4ddf-81d2-c95d094b0c98" SourceId="1" SourceUrl="http://192.168.1.4:50570/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="0883c192-04c5-4a2e-a880-b6d67d9078d8" SourceId="1" SourceUrl="http://192.168.1.4:50570/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="089027bc-c16e-4de5-9fc0-37d33bbf27ab" SourceId="1" SourceUrl="http://192.168.1.4:50570/Service1.svc?disco" />
-    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="e1cb8410-e92f-4895-b082-0071981542f3" SourceId="1" SourceUrl="http://192.168.1.4:50570/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="300cb540-f3a3-4915-b7d0-6e3c3b17c4a9" SourceId="1" SourceUrl="http://192.168.1.4:50570/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="c0c5bc27-2c29-4abf-a79b-5fc10a2f18d4" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="e52ff5b9-68fa-4e50-bbbd-738e630c5815" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="8b6fea43-17f1-4c24-bfce-6f2dc69be8a4" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="d3346ed5-992f-4641-a3a6-5fe3e21788d9" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="6f59b9e5-b899-4f1b-9a98-da9b38be823a" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
