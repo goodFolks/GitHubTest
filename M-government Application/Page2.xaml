@@ -25,6 +25,7 @@
 
         <Grid.RowDefinitions>
 
+            
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image Source="Assets/other pages.png"></Image>
@@ -39,7 +40,8 @@
                 <RowDefinition Height="0.5*"/>
             </Grid.RowDefinitions>
 
-            <Grid  Background="#FFF1DEC5"  Opacity="0.9" Grid.Row="0">
+            <StackPanel  Background="#FFF1DEC5"  Opacity="0.9" Grid.Row="0">
+                <ProgressBar x:Name="bar"></ProgressBar>
                 <toolkit:ListPicker ExpansionMode="FullScreenOnly" x:Name="Mainser"  
                                    
                     
@@ -71,7 +73,7 @@
                 </toolkit:ListPicker>
 
 
-            </Grid>
+            </StackPanel>
             <Grid  Background="#FFF1DEC5" Opacity="0.9" Grid.Row="1">
                 <toolkit:ListPicker x:Name="Subser" 
                    

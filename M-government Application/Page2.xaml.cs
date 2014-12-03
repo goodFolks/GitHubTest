@@ -58,6 +58,7 @@ namespace M_government_Application
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            bar.IsIndeterminate = true;
             int lang = 1;
             base.OnNavigatedTo(e);
             int clientType = (int)PhoneApplicationService.Current.State["clientType"];
@@ -85,6 +86,7 @@ namespace M_government_Application
         void client_getMainCategoryCompleted(object sender, getMainCategoryCompletedEventArgs e)
         {
          Mainser.ItemsSource=e.Result;
+         bar.IsIndeterminate = false;
 
         }
 
