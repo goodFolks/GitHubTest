@@ -1,0 +1,115 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="M_government_Application.Page4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" >
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Assets/other pages.png"></Image>
+        <Grid x:Name="ContentPanel" Grid.Row="0" Margin="0,200,0,0">
+
+            <Grid.RowDefinitions>
+
+
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Background="#FFF1DEC5"  Opacity="0.9" Grid.Row="0" Margin="0,0,0,34">
+
+
+                <TextBlock FontWeight="ExtraBlack" Margin="10,6"  TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Cond ,Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" FontSize="24"  Foreground="Black" FontFamily="DengXian" VerticalAlignment="Center"/>
+
+            </Grid>
+            <Grid  Background="#FFF1DEC5" Opacity="0.9" Margin="0,60,0,0" Grid.RowSpan="2">
+
+                <ScrollViewer>
+                    <TextBlock FontWeight="ExtraBlack" x:Name="questionTxt"  Margin="10" TextWrapping="Wrap"   FontSize="20"  Foreground="Black" />
+                </ScrollViewer>
+                <Button FontWeight="ExtraBlack" x:Name="noBtn" Content="{Binding Path=LocalizedResources.No ,Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right"  VerticalAlignment="Center" Background="White" Width="152" FontFamily="DengXian" FontSize="21"  Margin="0,174,83,28" Tap="noBtn_Tap" BorderBrush="#FF080707" Foreground="Black"/>
+
+                <Button  FontWeight="ExtraBlack" x:Name="yesBtn" Content="{Binding Path=LocalizedResources.Yes ,Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right"  VerticalAlignment="Center" Background="White" Width="152" FontFamily="DengXian" FontSize="21"  Margin="0,174,258,28" Tap="yesBtn_Tap" Foreground="#FF0A0A0A" BorderBrush="Black"/>
+                <TextBlock x:Name="questionCounter" TextWrapping="Wrap" Text="(    /    )" VerticalAlignment="Bottom" FontSize="20" Height="39" Width="75" Foreground="#FF6C6565" FontWeight="Bold" HorizontalAlignment="Right"/>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="nex_btn" Content="{Binding Path=LocalizedResources.Next ,Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left"  VerticalAlignment="Center" Background="#FFA80909" Width="152" FontFamily="DengXian" Grid.Column="1" Click="nex_btn_Click"/>
+                <Button x:Name="bac_btn" Content="{Binding Path=LocalizedResources.Back ,Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right"  VerticalAlignment="Center" Background="#FFA80909" Width="152" FontFamily="DengXian" FontSize="21" Click="bac_btn_Click"/>
+
+
+
+            </Grid>
+
+            <Grid  Background="#FFF1DEC5"   Opacity="0.5" Grid.Row="3" >
+
+
+                <Rectangle Fill="#FF6C6565" HorizontalAlignment="Left" Height="28" Margin="84,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FF6C6565" HorizontalAlignment="Left" Height="28" Margin="136,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFA80909" HorizontalAlignment="Left" Height="28" Margin="192,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="250,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="308,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="364,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="420,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FF6C6565" HorizontalAlignment="Left" Height="28" Margin="30,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+
+
+                <TextBlock HorizontalAlignment="Left" Margin="62,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="Black" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="62,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="115,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="170,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="228,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="284,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="342,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="398,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+
+
+            </Grid>
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+</phone:PhoneApplicationPage>

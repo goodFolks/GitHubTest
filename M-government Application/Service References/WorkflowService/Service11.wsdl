@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dantedemon89-001-site2.mywindowshosting.com/MishwarService/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dantedemon89-001-site2.mywindowshosting.com/MishwarService/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dantedemon89-001-site2.mywindowshosting.com/MishwarService/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wcfworkflow" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_getMainCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMainCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getMainCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMainCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSubService_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSubService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSubService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSubServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getService_InputMessage">
+    <wsdl:part name="parameters" element="tns:getService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:getConditions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getProcedures_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProcedures" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getProcedures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProceduresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSingleService_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSingleService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSingleService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSingleServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="getMainCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getMainCategory" message="tns:IService1_getMainCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getMainCategoryResponse" message="tns:IService1_getMainCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSubService" message="tns:IService1_getSubService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSubServiceResponse" message="tns:IService1_getSubService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getService" message="tns:IService1_getService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getServiceResponse" message="tns:IService1_getService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDocuments" message="tns:IService1_getDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDocumentsResponse" message="tns:IService1_getDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getConditions" message="tns:IService1_getConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getConditionsResponse" message="tns:IService1_getConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProcedures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getProcedures" message="tns:IService1_getProcedures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getProceduresResponse" message="tns:IService1_getProcedures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSingleService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSingleService" message="tns:IService1_getSingleService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSingleServiceResponse" message="tns:IService1_getSingleService_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMainCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/getMainCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubService">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSubService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getService">
+      <soap:operation soapAction="http://tempuri.org/IService1/getService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocuments">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConditions">
+      <soap:operation soapAction="http://tempuri.org/IService1/getConditions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcedures">
+      <soap:operation soapAction="http://tempuri.org/IService1/getProcedures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSingleService">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSingleService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://dantedemon89-001-site2.mywindowshosting.com/MishwarService/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

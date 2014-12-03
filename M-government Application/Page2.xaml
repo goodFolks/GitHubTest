@@ -1,0 +1,220 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+
+    
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    x:Class="M_government_Application.Page2"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot" >
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Assets/other pages.png"></Image>
+        <Grid x:Name="ContentPanel" Grid.Row="0" Margin="0,250,0,0">
+            <Grid.RowDefinitions>
+
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Background="#FFF1DEC5"  Opacity="0.9" Grid.Row="0">
+                <toolkit:ListPicker ExpansionMode="FullScreenOnly" x:Name="Mainser"  
+                                   
+                    
+                      BorderBrush="#FF060606" CacheMode="BitmapCache" Background="#FFF9F9FA" FontFamily="Candara" Foreground="#FFBD0000" VerticalAlignment="Center" SelectionChanged="Mainser_SelectionChanged" Tap="Mainser_Tap" ManipulationStarted="Mainser_ManipulationStarted" >
+                    <toolkit:ListPicker.HeaderTemplate>
+
+                        <DataTemplate>
+
+                            <TextBlock  Foreground="Black" Text="{Binding Source={StaticResource LocalizedStrings},Path=LocalizedResources.Mainser}"></TextBlock>
+                        </DataTemplate>
+                    </toolkit:ListPicker.HeaderTemplate>
+
+                    <toolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </DataTemplate>
+                    </toolkit:ListPicker.ItemTemplate>
+                    <toolkit:ListPicker.FullModeItemTemplate>
+
+                        <DataTemplate>
+                            <StackPanel>
+
+                                <TextBlock Text="{Binding Name}" FontFamily="Constantia" FontSize="25"  Foreground="White"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </toolkit:ListPicker.FullModeItemTemplate>
+
+
+                </toolkit:ListPicker>
+
+
+            </Grid>
+            <Grid  Background="#FFF1DEC5" Opacity="0.9" Grid.Row="1">
+                <toolkit:ListPicker x:Name="Subser" 
+                   
+                    BorderBrush="Black" CacheMode="BitmapCache" Background="#FFF9F9FA" FontFamily="Candara" Foreground="#FFBD0000" VerticalAlignment="Center" ExpansionMode="FullScreenOnly" SelectionChanged="Subser_SelectionChanged" ManipulationStarted="Subser_ManipulationStarted">
+
+                    <toolkit:ListPicker.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock  Foreground="Black" Text="{Binding Source={StaticResource LocalizedStrings},Path=LocalizedResources.Subser}"></TextBlock>
+                        </DataTemplate>
+
+
+                    </toolkit:ListPicker.HeaderTemplate>
+
+
+                    <toolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name}" FontFamily="Constantia" FontSize="25"  Foreground="White" ></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </toolkit:ListPicker.FullModeItemTemplate>
+                    <toolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" ></TextBlock>
+                        </DataTemplate>
+
+                    </toolkit:ListPicker.ItemTemplate>
+
+
+                </toolkit:ListPicker>
+
+
+
+            </Grid>
+            <Grid  Background="#FFF1DEC5" Opacity="0.9" Grid.Row="2">
+                <toolkit:ListPicker x:Name="Ser" 
+                   ExpansionMode="FullScreenOnly"
+                    BorderBrush="Black" CacheMode="BitmapCache" Background="#FFF9F9FA" FontFamily="Candara" Foreground="#FFBD0000" VerticalAlignment="Center" SelectionChanged="Ser_SelectionChanged" ManipulationStarted="Ser_ManipulationStarted" >
+                    <toolkit:ListPicker.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock  Foreground="Black" Text="{Binding Source={StaticResource LocalizedStrings},Path=LocalizedResources.Ser}"></TextBlock>
+                        </DataTemplate>
+                    </toolkit:ListPicker.HeaderTemplate>
+                    <toolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </DataTemplate>
+                    </toolkit:ListPicker.ItemTemplate>
+                    <toolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name}" FontFamily="Constantia" FontSize="25"  Foreground="White" ></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </toolkit:ListPicker.FullModeItemTemplate>
+
+
+                </toolkit:ListPicker>
+
+
+
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0,116,0,10" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button x:Name="bac_btn" Content="{Binding Path=LocalizedResources.Back ,Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right"  VerticalAlignment="Center" Background="#FFA80909" Width="152" FontFamily="DengXian" FontSize="21" Click="bac_btn_Click" />
+                <Button x:Name="nex_btn" Content="{Binding Path=LocalizedResources.Next ,Source={StaticResource LocalizedStrings}}"  VerticalAlignment="Center" Background="#FFA80909" Width="152" FontFamily="DengXian" Click="nex_btn_Click" HorizontalAlignment="Left" Grid.Column="1" />
+                <!--<Button x:Name="arabic" Content="عربي" HorizontalAlignment="Right"  VerticalAlignment="Center" Background="White" Width="100" FontFamily="DengXian" FontSize="21" 
+                        Margin="0,-473,52,510" Height="67" Click="arabic_Click" Foreground="Black" BorderBrush="Maroon" />
+                <Button x:Name="english" Content="English" HorizontalAlignment="Right"  VerticalAlignment="Center" Background="White" Width="100" FontFamily="DengXian" FontSize="13" 
+                        Margin="0,-473,135,510" Height="67" BorderBrush="Maroon" Foreground="Black" Click="english_Click" FontWeight="Bold" />-->
+            </Grid>
+
+            <Grid  Background="#FFF1DEC5"   Opacity="0.5" Grid.Row="3" Margin="0,110,0,0" Grid.RowSpan="2" >
+
+                <Rectangle Fill="#FFA80909"  HorizontalAlignment="Left" Height="28" Margin="84,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="136,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="192,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="250,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="308,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="364,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="28" Margin="420,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Rectangle Fill="#FF6C6565" HorizontalAlignment="Left" Height="28" Margin="29,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+
+                <TextBlock HorizontalAlignment="Left" Margin="62,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="115,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="170,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="228,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="284,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="342,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="398,7,0,7" TextWrapping="Wrap" Text="&gt;" FontSize="30" Width="25" Foreground="#FF6C6565" Grid.Row="1"/>
+
+
+            </Grid>
+        </Grid>
+        <TextBlock
+  Name="MyFadingText"
+  Margin="10,215,30,508" FontSize="17" FontWeight="Bold" Foreground="Maroon"    Text="{Binding Path=LocalizedResources.Note1 ,Source={StaticResource LocalizedStrings}}">
+ 
+    
+
+  <!-- Animates the text block's opacity. -->
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="MyFadingText" 
+            Storyboard.TargetProperty="(TextBlock.Opacity)"
+            From="1.0" To="0.3" Duration="0:0:5" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+
+        <TextBlock
+  Name="MyWipedText"
+  Margin="10,160,-10,508" 
+  Width="480" Height="100" FontSize="40" FontWeight="Bold" Foreground="Maroon" Text="{Binding Path=LocalizedResources.Note ,Source={StaticResource LocalizedStrings}}">
+
+
+  <!-- Animates the text block's width. -->
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="MyWipedText" 
+            Storyboard.TargetProperty="(TextBlock.Width)"
+            To="0.0" Duration="0:0:10" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+    </Grid>
+
+</phone:PhoneApplicationPage>

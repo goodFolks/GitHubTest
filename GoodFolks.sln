@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodFolks", "GoodFolks\Good
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneApp1.1__H", "PhoneApp1.1__H\PhoneApp1.1__H\PhoneApp1.1__H.csproj", "{193E777D-0B38-4BC0-A5CA-85931A44ED15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_government_Application", "..\..\..\Desktop\app\M-government Application\M-government Application\M_government_Application.csproj", "{24F875EF-56FE-449A-923B-26D3EE64C56B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_government_Application", "M-government Application\M_government_Application.csproj", "{24F875EF-56FE-449A-923B-26D3EE64C56B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
