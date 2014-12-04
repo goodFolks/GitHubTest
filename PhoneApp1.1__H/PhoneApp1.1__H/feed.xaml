@@ -48,7 +48,7 @@
             <controls:Pivot >
                 <controls:Pivot.Title>
                     <StackPanel>
-                        <ProgressBar Background="#A2c400" x:Name="bar" IsIndeterminate="True" Foreground="Black" >
+                        <ProgressBar Background="#A2c400" x:Name="bar" IsIndeterminate="True" Foreground="White" >
                            
                         </ProgressBar>
 

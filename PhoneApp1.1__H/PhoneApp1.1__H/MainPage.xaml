@@ -19,6 +19,9 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Border BorderBrush="Gray" BorderThickness="5">
         <StackPanel Background="#A2c400">
+
+            <ProgressBar Background="#A2c400"  Foreground="Gray" x:Name="bar" IsIndeterminate="False" Margin="0,1,0,0" LargeChange="2" ></ProgressBar>
+
             <Image Source="/images/Lime-A2C400.png" Margin="0,50" Visibility="Visible" />
           
             <Controls:WatermarkTextBox x:Name="userTxt" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Username or Email" Background="#FFEFFFD6" Foreground="#FF959595"></Controls:WatermarkTextBox>
@@ -26,7 +29,6 @@
 
             
             <Controls:WatermarkPasswordBox x:Name="userPass" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Password" Background="#FFEFFFD6" FocusedForeground="Black" Foreground="#FF959595" SelectionBackground="#FF254C5F"></Controls:WatermarkPasswordBox>
-            <ProgressBar Background="#A2c400"  Foreground="Black" x:Name="bar" IsIndeterminate="False" ></ProgressBar>
             <TextBlock x:Name="emptyPass" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
             <TextBlock x:Name="wrongAcc" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Username or Password you entered is incorrect" TextAlignment="Center"></TextBlock>
 

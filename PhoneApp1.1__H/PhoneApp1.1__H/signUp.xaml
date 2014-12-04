@@ -17,7 +17,7 @@
 
     <Border BorderBrush="Gray" BorderThickness="5">
         <ScrollViewer>
-            <StackPanel Orientation="Vertical" Background="#A2c400" >
+            <StackPanel Orientation="Vertical" Background="#6D8764" >
 
                 <StackPanel Orientation="Horizontal" Height="129" Margin="10,0">
                     <TextBlock Text="Sign" FontSize="85"  />
@@ -73,8 +73,8 @@
                         
                     </Grid>
                     <Border BorderBrush="Gray" BorderThickness="2" Margin="0,27"></Border>
-
                     <TextBlock x:Name="emptyRadio" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*You are missing some options" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,-21,0,0" />
+                    <ProgressBar Background="#A2c400"  Foreground="White" x:Name="bar" IsIndeterminate="False" Margin="0,0,0,3" LargeChange="2" ></ProgressBar>
                     <Button Content="Create Account" FontSize="30" Margin="0,-13,0,0" Tap="Button_Tap"/>
                     <ScrollBar/>
                 </StackPanel>
