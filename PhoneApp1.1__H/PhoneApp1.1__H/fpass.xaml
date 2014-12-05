@@ -14,15 +14,16 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
+
     <Border BorderBrush="Gray" BorderThickness="5">
-        <StackPanel Background="#A2c400" >
-          
-            <StackPanel Height="500">
-                <TextBlock Text="Please enter a valid email where your password will be sent. " TextDecorations="Underline" TextWrapping="Wrap" FontSize="30" Margin="0,100" />
-                <Controls:WatermarkTextBox BorderThickness="3"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F"  WatermarkText="Email" Margin="0,-50" Height="75"/>
-                <Button Content="Send" FontSize="30" Margin="0,50" />
+        <StackPanel Background="#6D8764" >
+
+            <StackPanel Margin="0,200,0,0">
+                <TextBlock Text="Please enter a valid email where your password will be sent. " TextDecorations="Underline" TextWrapping="Wrap" FontSize="30" Margin="10,0,0,0"  />
+                <Controls:WatermarkTextBox BorderThickness="3"  BorderBrush="#B9B9B9" Background="#FFEFFFD6" Foreground="#FF5F5F5F"  WatermarkText="Email"  Height="75"/>
+                <Button Content="Send" FontSize="30" />
             </StackPanel>
-        
+
         </StackPanel>
     </Border>
 </phone:PhoneApplicationPage>

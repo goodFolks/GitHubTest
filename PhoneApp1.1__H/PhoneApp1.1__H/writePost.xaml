@@ -24,8 +24,8 @@
         </Storyboard>
 
     </phone:PhoneApplicationPage.Resources>
-   
-    <Grid x:Name="LayoutRoot" Background="#a2c400" >
+
+    <Grid x:Name="LayoutRoot" Background="#6D8764" >
         <Grid Height="768">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"></RowDefinition>
@@ -43,7 +43,7 @@
             </TextBlock>
             
 
-            <Controls:WatermarkTextBox x:Name="postBox"  Grid.Row="1" Background="#FFEFFFD6" Foreground="#FF5F5F5F" WatermarkText="Share with us your achievment :)" TextWrapping="Wrap" BorderBrush="Gray" BorderThickness="3">
+            <Controls:WatermarkTextBox x:Name="postBox"  Grid.Row="1" Background="White" Foreground="#FF5F5F5F" WatermarkText="Share with us your achievment :)" TextWrapping="Wrap" BorderBrush="Gray" BorderThickness="3">
                 <Controls:WatermarkTextBox.RenderTransform>
                         <TranslateTransform x:Name="Xm"></TranslateTransform>
                     </Controls:WatermarkTextBox.RenderTransform>

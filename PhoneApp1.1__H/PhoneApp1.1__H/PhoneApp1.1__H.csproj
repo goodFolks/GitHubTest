@@ -177,6 +177,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo3.png" />
     <Content Include="README_FIRST.txt" />
     <None Include="Service References\myService\Service1.disco" />
     <None Include="Service References\myService\Service11.disco" />

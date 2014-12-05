@@ -40,7 +40,7 @@
 
     <Border BorderBrush="Gray" BorderThickness="5">
 
-        <Grid x:Name="LayoutRoot" Background="#A2c400">
+        <Grid x:Name="LayoutRoot" Background="#6D8764">
             <Grid.RowDefinitions>
 
                 <RowDefinition></RowDefinition>
@@ -48,7 +48,7 @@
             <controls:Pivot >
                 <controls:Pivot.Title>
                     <StackPanel>
-                        <ProgressBar Background="#A2c400" x:Name="bar" IsIndeterminate="True" Foreground="White" >
+                        <ProgressBar Background="#6D8764" x:Name="bar"  IsIndeterminate="True" Foreground="White" >
                            
                         </ProgressBar>
 
@@ -87,15 +87,15 @@
 
                                     <Border BorderBrush="Gray" BorderThickness="4">
 
-                                        <StackPanel Background="#FFF3FFE8">
+                                        <StackPanel Background="White">
                                             <StackPanel Width="412" Margin="0,10,30,0">
-                                                <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0">
                                                     <Image Source="{Binding userImage,Converter={StaticResource ResourceKey=conv}}" Width="90" Height="70" HorizontalAlignment="Left" Stretch="UniformToFill" ></Image>
 
 
                                                 </Border>
-                                                <TextBlock Text="{Binding userName}" FontWeight="ExtraBold" FontSize="25" Height="38" Margin="96,-100,-31,10"  Foreground="Gray" />
-                                                <TextBlock Text="{Binding postTime,Converter={StaticResource ResourceKey=dateConv}}" Foreground="Gray" Margin="100,-35,-31,0" Height="29" TextDecorations="Underline" HorizontalAlignment="Left" Width="343"/>
+                                                <TextBlock Text="{Binding userName}" FontWeight="ExtraBold" FontSize="25" Height="38" Margin="101,-100,-31,10"  Foreground="Gray" />
+                                                <TextBlock Text="{Binding postTime,Converter={StaticResource ResourceKey=dateConv}}" Foreground="Gray" Margin="105,-35,-31,0" Height="29" TextDecorations="Underline" HorizontalAlignment="Left" Width="343"/>
                                                 <TextBlock Text="{Binding txtContent}"  Foreground="Gray" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="6,0,-31,0" ></TextBlock>
                                             </StackPanel>
                                             <Border BorderBrush="Gray" BorderThickness="1" Margin="7">

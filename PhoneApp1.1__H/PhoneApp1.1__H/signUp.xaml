@@ -21,7 +21,7 @@
 
                 <StackPanel Orientation="Horizontal" Height="129" Margin="10,0">
                     <TextBlock Text="Sign" FontSize="85"  />
-                    <TextBlock Text="Up!" FontSize="85" Foreground="Gray"/>
+                    <TextBlock Text="Up!" FontSize="85" Foreground="#FFAAAAAA"/>
                 </StackPanel>
                 <TextBlock  TextWrapping="Wrap" Text="Please fill out your information and welcome to GoodFolks!" FontSize="30" Height="85" Width="458" Margin="10,0"/>
                 <StackPanel Margin="0,10">
@@ -51,15 +51,15 @@
                     <toolkit:DatePicker x:Name="bDate" BorderThickness="4" BorderBrush="#B9B9B9" Foreground="#B9B9B9"   Height="80" Background="#FFEFFFD6" ValueStringFormat="Birthdate" Tap="bDate_Tap"/>
                     <TextBlock x:Name="emptyBdate" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
 
-                    <Border BorderBrush="Gray" BorderThickness="2" ></Border>
+                    <Border BorderBrush="#FFAAAAAA" BorderThickness="2" ></Border>
                     <StackPanel Orientation="Horizontal" Margin="-8" >
                         <TextBlock Text="Gender:" FontSize="33" Margin="15" Width="119"/>
-                        <RadioButton x:Name="malBtn" Content="Male" GroupName="1" Foreground="Gray" FontSize="30" />
-                        
-                        <RadioButton x:Name="femalBtn" Content="Female" GroupName="1" Foreground="Gray"  FontSize="30" Width="166"/>
+                        <RadioButton x:Name="malBtn" Content="Male" GroupName="1"  FontSize="30" />
+
+                        <RadioButton x:Name="femalBtn" Content="Female" GroupName="1"   FontSize="30" Width="166"/>
                     </StackPanel>
-                 
-                    <Border BorderBrush="Gray" BorderThickness="2"></Border>
+
+                    <Border BorderBrush="#FFAAAAAA" BorderThickness="2"></Border>
                     <Grid Height="122">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="40"></RowDefinition>
@@ -67,14 +67,14 @@
                         </Grid.RowDefinitions>
                     <TextBlock Text="I am joining GoodFolks as :" FontSize="30" Height="51" VerticalAlignment="Top" Margin="10,0" />
                         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,0,0,-107">
-                            <RadioButton x:Name="indUser" Content="An individual" GroupName="2" Foreground="Gray" FontSize="30" Height="73" Margin="5,-10" />
-                            <RadioButton x:Name="orgUser" Content="An organization" GroupName="2" Foreground="Gray" FontSize="30" Height="80" Margin="5,-14" />
+                            <RadioButton x:Name="indUser" Content="An individual" GroupName="2"  FontSize="30" Height="73" Margin="5,-10" />
+                            <RadioButton x:Name="orgUser" Content="An organization" GroupName="2" FontSize="30" Height="80" Margin="5,-14" />
                         </StackPanel>
                         
                     </Grid>
-                    <Border BorderBrush="Gray" BorderThickness="2" Margin="0,27"></Border>
+                    <Border BorderBrush="#FFAAAAAA" BorderThickness="2" Margin="0,27"></Border>
                     <TextBlock x:Name="emptyRadio" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*You are missing some options" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,-21,0,0" />
-                    <ProgressBar Background="#A2c400"  Foreground="White" x:Name="bar" IsIndeterminate="False" Margin="0,0,0,3" LargeChange="2" ></ProgressBar>
+                    <ProgressBar Background="#6D8764"  Foreground="White" x:Name="bar" IsIndeterminate="False" Margin="0,0,0,3" LargeChange="2" ></ProgressBar>
                     <Button Content="Create Account" FontSize="30" Margin="0,-13,0,0" Tap="Button_Tap"/>
                     <ScrollBar/>
                 </StackPanel>

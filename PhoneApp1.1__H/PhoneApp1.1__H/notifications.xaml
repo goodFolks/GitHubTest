@@ -25,9 +25,9 @@
         
     </phone:PhoneApplicationPage.Resources>
     <!--LayoutRoot is the root grid where all page content is placed-->
-    
-    
-        <Grid Background="#a2c400">
+
+
+    <Grid Background="#6D8764">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="43"></RowDefinition>
@@ -47,7 +47,7 @@
 
         <TextBlock Text="Notifications" Foreground="White" FontSize="36" Margin="5,0,0,0" Grid.Row="1"/>
         
-        <ListBox Background="Beige" x:Name="mylist" BorderBrush="Gray" BorderThickness="1" Margin="0,4,0,0" Grid.Row="2">
+        <ListBox Background="White" x:Name="mylist" BorderBrush="Gray" BorderThickness="1" Margin="0,4,0,0" Grid.Row="2">
               <ListBox.RenderTransform>
                     <TransformGroup>
                         <TranslateTransform x:Name="trans"/>

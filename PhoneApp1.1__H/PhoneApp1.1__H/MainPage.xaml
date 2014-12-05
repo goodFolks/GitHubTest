@@ -18,11 +18,11 @@
     </phone:PhoneApplicationPage.Resources>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Border BorderBrush="Gray" BorderThickness="5">
-        <StackPanel Background="#A2c400">
+        <StackPanel Background="#6D8764">
 
-            <ProgressBar Background="#A2c400"  Foreground="Gray" x:Name="bar" IsIndeterminate="False" Margin="0,1,0,0" LargeChange="2" ></ProgressBar>
+            <ProgressBar Background="#6D8764"   x:Name="bar" IsIndeterminate="False" Margin="0,1,0,0" LargeChange="2" ></ProgressBar>
 
-            <Image Source="/images/Lime-A2C400.png" Margin="0,50" Visibility="Visible" />
+            <Image Source="/images/logo3.png" Margin="0,50" Visibility="Visible" />
           
             <Controls:WatermarkTextBox x:Name="userTxt" BorderThickness="5" BorderBrush="#B9B9B9" WatermarkText="Username or Email" Background="#FFEFFFD6" Foreground="#FF959595"></Controls:WatermarkTextBox>
             <TextBlock x:Name="emptyUser" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*This field is required" TextAlignment="Center"></TextBlock>
@@ -33,8 +33,8 @@
             <TextBlock x:Name="wrongAcc" Visibility="Collapsed" Foreground="#FFAA2222" FontSize="20" Text="*Username or Password you entered is incorrect" TextAlignment="Center"></TextBlock>
 
             <Button Content="Sign in " FontSize="30" Tap="Button_Tap"   ></Button>
-            <HyperlinkButton x:Name="fpass" Content="Forgot Password?" Click="fpass_Click" Foreground="Gray" FontWeight="ExtraBold" FontSize="20"></HyperlinkButton>
-            <TextBlock Text="You don't have an account?" FontWeight="ExtraBold" Foreground="Gray" FontSize="20" Margin="0,130,0,0" TextAlignment="Center"></TextBlock>
+            <HyperlinkButton x:Name="fpass" Content="Forgot Password?" Click="fpass_Click" Foreground="#FFAAAAAA" FontWeight="ExtraBold" FontSize="20"></HyperlinkButton>
+            <TextBlock Text="You don't have an account?" FontWeight="ExtraBold" Foreground="#FFAAAAAA" FontSize="20" Margin="0,130,0,0" TextAlignment="Center"></TextBlock>
             <HyperlinkButton x:Name="signUp" FontSize="25" Content="Sign Up!" Margin="0,10,0,0" Click="signUp_Click"></HyperlinkButton>
         </StackPanel>        
 </Border>
