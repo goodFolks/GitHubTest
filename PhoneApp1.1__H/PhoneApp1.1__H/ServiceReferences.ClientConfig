@@ -9,9 +9,9 @@
             </basicHttpBinding>
         </bindings>
         <client>
-            <endpoint address="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IService1"
-                contract="myService.IService1" name="BasicHttpBinding_IService1" />
+            <endpoint address="http://192.168.1.6:50570/Service1.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IService1" contract="myService.IService1"
+                name="BasicHttpBinding_IService1" />
         </client>
     </system.serviceModel>
 </configuration>

@@ -105,7 +105,7 @@
                                             </Border>
                                             <Border BorderBrush="white" BorderThickness="1">
                                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Height="35">
-                                                    <Image Source="images/salute.jpg" Width="70" Height="50" Margin="0,-5,0,0"  />
+                                                    <Image Tag="{Binding postId}" Source="images/salute.jpg" Width="70" Height="50" Margin="0,-5,0,0" Tap="Image_Tap_1"  />
 
                                                     <TextBlock Margin="-1,3,0,0"><Run Text="{Binding Salutes}" Foreground="Gray" FontSize="25" FontWeight="SemiBold"></Run></TextBlock>
                                                     <TextBlock Foreground="Gray" Text="{Binding postLocation}" TextWrapping="Wrap" FontSize="14" Width="200" Margin="135,0" TextAlignment="Right"></TextBlock>

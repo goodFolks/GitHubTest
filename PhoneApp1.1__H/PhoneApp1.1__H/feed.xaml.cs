@@ -51,6 +51,7 @@ namespace PhoneApp1._1__H
 
         void client_getFriendsPostsCompleted(object sender, getFriendsPostsCompletedEventArgs e)
         {
+            
             listt.ItemsSource = e.Result;
             bar.IsIndeterminate = false;
            
@@ -75,6 +76,38 @@ namespace PhoneApp1._1__H
             NavigationService.Navigate(new Uri("/feed.xaml?" + DateTime.Now.Ticks, UriKind.Relative));
         }
 
+      
+        int PID;
+        private void Image_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+             PID= int.Parse((sender as Image).Tag.ToString());
+          client.isSalutedAsync(PID, userId);
+          client.isSalutedCompleted += client_isSalutedCompleted;
+        }
+
+        void client_isSalutedCompleted(object sender, isSalutedCompletedEventArgs e)
+        {
+            
+            if(e.Result)
+            {
+                MessageBox.Show("saluted already");
+            }
+            if(!e.Result)
+            {
+
+                client.addSaluteAsync(PID, userId);
+                client.addSaluteCompleted+=client_addSaluteCompleted;
+
+            }
+        }
+
+        void client_addSaluteCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            
+        }
+
+        
+
     }
 
     public class ByetConverter : IValueConverter
@@ -86,9 +119,24 @@ namespace PhoneApp1._1__H
             if (value != null)
             {
                 byte[] imageBytes = value as byte[];
-              //  BitmapImage ff = new BitmapImage();
-                MemoryStream ms = new MemoryStream(imageBytes);
-                ff.SetSource(ms);
+                //  BitmapImage ff = new BitmapImage();
+               MemoryStream ms = new MemoryStream(imageBytes);
+               
+                try
+                {
+                    
+                    ff.SetSource(ms);
+                    
+                }
+                catch(Exception e)
+                {
+                    ms.Close();
+                }
+                finally
+                {
+                  
+                }
+               
             }
             return ff;
         }

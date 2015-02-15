@@ -133,7 +133,7 @@ namespace GoodFolks
                 temp.postLocation = result["post_location"] as string;
                 temp.postUser = (int)result["post_user"];
                 temp.postTime = (DateTime)result["post_time"];
-                
+                temp.postId = (int)result["post_id"];
                 string query2 = "select u_name , u_image from member where u_id=@Id";
                 SqlConnection con2 = new SqlConnection((ConfigurationManager.ConnectionStrings["GOODFOLKSConnectionString"].ConnectionString).ToString());
                 con2.Open();
@@ -200,6 +200,33 @@ namespace GoodFolks
           
                
             
+            
+        }
+
+
+        public void addSalute(int postId, int userID)
+        {
+            newConnection();
+            string query = "insert into salute (salute_post,salute_user) values (@PID,@UID)";
+            com = new SqlCommand(query, con);
+            com.Parameters.Add("@PID", SqlDbType.Int).Value = postId;
+            com.Parameters.Add("@UID", SqlDbType.Int).Value = userID;
+            int result = com.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public bool isSaluted(int postId, int userID)
+        {
+            newConnection();
+            string query = "select * from salute where salute_post=@PID and salute_user=@UID";
+            com = new SqlCommand(query, con);
+            com.Parameters.Add("@PID", SqlDbType.Int).Value = postId;
+            com.Parameters.Add("@UID", SqlDbType.Int).Value = userID;
+            SqlDataReader reader = com.ExecuteReader();
+            bool result = reader.HasRows;
+            con.Close();
+            return result;
+      
             
         }
     }

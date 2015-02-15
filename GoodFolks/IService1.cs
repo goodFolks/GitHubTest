@@ -46,7 +46,13 @@ namespace GoodFolks
         List<Event> getEvents();
 
         [OperationContract]
-        List<Post> getStrangerPosts();        
+        List<Post> getStrangerPosts();
+
+        [OperationContract]
+        void addSalute(int postId, int userID);
+
+        [OperationContract]
+        bool isSaluted(int postId, int userID);
         
 
     }

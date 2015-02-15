@@ -643,6 +643,16 @@ namespace PhoneApp1._1__H.myService {
         System.IAsyncResult BegingetStrangerPosts(System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<PhoneApp1._1__H.myService.Post> EndgetStrangerPosts(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/addSalute", ReplyAction="http://tempuri.org/IService1/addSaluteResponse")]
+        System.IAsyncResult BeginaddSalute(int postId, int userID, System.AsyncCallback callback, object asyncState);
+        
+        void EndaddSalute(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/isSaluted", ReplyAction="http://tempuri.org/IService1/isSalutedResponse")]
+        System.IAsyncResult BeginisSaluted(int postId, int userID, System.AsyncCallback callback, object asyncState);
+        
+        bool EndisSaluted(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -860,6 +870,25 @@ namespace PhoneApp1._1__H.myService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class isSalutedCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public isSalutedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class Service1Client : System.ServiceModel.ClientBase<PhoneApp1._1__H.myService.IService1>, PhoneApp1._1__H.myService.IService1 {
         
         private BeginOperationDelegate onBeginnewUserDelegate;
@@ -927,6 +956,18 @@ namespace PhoneApp1._1__H.myService {
         private EndOperationDelegate onEndgetStrangerPostsDelegate;
         
         private System.Threading.SendOrPostCallback ongetStrangerPostsCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginaddSaluteDelegate;
+        
+        private EndOperationDelegate onEndaddSaluteDelegate;
+        
+        private System.Threading.SendOrPostCallback onaddSaluteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginisSalutedDelegate;
+        
+        private EndOperationDelegate onEndisSalutedDelegate;
+        
+        private System.Threading.SendOrPostCallback onisSalutedCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -1002,6 +1043,10 @@ namespace PhoneApp1._1__H.myService {
         public event System.EventHandler<getEventsCompletedEventArgs> getEventsCompleted;
         
         public event System.EventHandler<getStrangerPostsCompletedEventArgs> getStrangerPostsCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> addSaluteCompleted;
+        
+        public event System.EventHandler<isSalutedCompletedEventArgs> isSalutedCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
@@ -1509,6 +1554,101 @@ namespace PhoneApp1._1__H.myService {
             base.InvokeAsync(this.onBegingetStrangerPostsDelegate, null, this.onEndgetStrangerPostsDelegate, this.ongetStrangerPostsCompletedDelegate, userState);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult PhoneApp1._1__H.myService.IService1.BeginaddSalute(int postId, int userID, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginaddSalute(postId, userID, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        void PhoneApp1._1__H.myService.IService1.EndaddSalute(System.IAsyncResult result) {
+            base.Channel.EndaddSalute(result);
+        }
+        
+        private System.IAsyncResult OnBeginaddSalute(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int postId = ((int)(inValues[0]));
+            int userID = ((int)(inValues[1]));
+            return ((PhoneApp1._1__H.myService.IService1)(this)).BeginaddSalute(postId, userID, callback, asyncState);
+        }
+        
+        private object[] OnEndaddSalute(System.IAsyncResult result) {
+            ((PhoneApp1._1__H.myService.IService1)(this)).EndaddSalute(result);
+            return null;
+        }
+        
+        private void OnaddSaluteCompleted(object state) {
+            if ((this.addSaluteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.addSaluteCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void addSaluteAsync(int postId, int userID) {
+            this.addSaluteAsync(postId, userID, null);
+        }
+        
+        public void addSaluteAsync(int postId, int userID, object userState) {
+            if ((this.onBeginaddSaluteDelegate == null)) {
+                this.onBeginaddSaluteDelegate = new BeginOperationDelegate(this.OnBeginaddSalute);
+            }
+            if ((this.onEndaddSaluteDelegate == null)) {
+                this.onEndaddSaluteDelegate = new EndOperationDelegate(this.OnEndaddSalute);
+            }
+            if ((this.onaddSaluteCompletedDelegate == null)) {
+                this.onaddSaluteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnaddSaluteCompleted);
+            }
+            base.InvokeAsync(this.onBeginaddSaluteDelegate, new object[] {
+                        postId,
+                        userID}, this.onEndaddSaluteDelegate, this.onaddSaluteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult PhoneApp1._1__H.myService.IService1.BeginisSaluted(int postId, int userID, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginisSaluted(postId, userID, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool PhoneApp1._1__H.myService.IService1.EndisSaluted(System.IAsyncResult result) {
+            return base.Channel.EndisSaluted(result);
+        }
+        
+        private System.IAsyncResult OnBeginisSaluted(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int postId = ((int)(inValues[0]));
+            int userID = ((int)(inValues[1]));
+            return ((PhoneApp1._1__H.myService.IService1)(this)).BeginisSaluted(postId, userID, callback, asyncState);
+        }
+        
+        private object[] OnEndisSaluted(System.IAsyncResult result) {
+            bool retVal = ((PhoneApp1._1__H.myService.IService1)(this)).EndisSaluted(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnisSalutedCompleted(object state) {
+            if ((this.isSalutedCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.isSalutedCompleted(this, new isSalutedCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void isSalutedAsync(int postId, int userID) {
+            this.isSalutedAsync(postId, userID, null);
+        }
+        
+        public void isSalutedAsync(int postId, int userID, object userState) {
+            if ((this.onBeginisSalutedDelegate == null)) {
+                this.onBeginisSalutedDelegate = new BeginOperationDelegate(this.OnBeginisSaluted);
+            }
+            if ((this.onEndisSalutedDelegate == null)) {
+                this.onEndisSalutedDelegate = new EndOperationDelegate(this.OnEndisSaluted);
+            }
+            if ((this.onisSalutedCompletedDelegate == null)) {
+                this.onisSalutedCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnisSalutedCompleted);
+            }
+            base.InvokeAsync(this.onBeginisSalutedDelegate, new object[] {
+                        postId,
+                        userID}, this.onEndisSalutedDelegate, this.onisSalutedCompletedDelegate, userState);
+        }
+        
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
             return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
         }
@@ -1723,6 +1863,33 @@ namespace PhoneApp1._1__H.myService {
             public System.Collections.ObjectModel.ObservableCollection<PhoneApp1._1__H.myService.Post> EndgetStrangerPosts(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 System.Collections.ObjectModel.ObservableCollection<PhoneApp1._1__H.myService.Post> _result = ((System.Collections.ObjectModel.ObservableCollection<PhoneApp1._1__H.myService.Post>)(base.EndInvoke("getStrangerPosts", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginaddSalute(int postId, int userID, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[2];
+                _args[0] = postId;
+                _args[1] = userID;
+                System.IAsyncResult _result = base.BeginInvoke("addSalute", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public void EndaddSalute(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                base.EndInvoke("addSalute", _args, result);
+            }
+            
+            public System.IAsyncResult BeginisSaluted(int postId, int userID, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[2];
+                _args[0] = postId;
+                _args[1] = userID;
+                System.IAsyncResult _result = base.BeginInvoke("isSaluted", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndisSaluted(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("isSaluted", _args, result)));
                 return _result;
             }
         }
