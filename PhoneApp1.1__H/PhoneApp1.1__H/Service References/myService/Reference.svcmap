@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="589ee7c5-29fc-498b-a678-f1fff225312f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c9188db-b990-4bdc-859a-51bb788f8ba3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -20,14 +20,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.1.6:50570/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="a2a9c287-8244-4621-affd-151f8abdd2d3" SourceId="1" SourceUrl="http://192.168.1.6:50570/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="a9d83848-29df-4fe7-a6a8-79078568e8df" SourceId="1" SourceUrl="http://192.168.1.6:50570/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="65bde733-b537-482e-aaa4-785f0fa0e247" SourceId="1" SourceUrl="http://192.168.1.6:50570/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="1c1a68bc-e340-46ab-9e31-22cd97387ee1" SourceId="1" SourceUrl="http://192.168.1.6:50570/Service1.svc?disco" />
-    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="b564eff5-a22f-4dea-8bf9-9410b86ea568" SourceId="1" SourceUrl="http://192.168.1.6:50570/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="e590a63c-24cf-4b7b-b1e9-3d63794ed21e" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="bb9a207b-7ff4-487c-811d-2183eebf7958" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="dd1dc261-f02b-4691-bdcd-53add444b985" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="dca93aa6-fc70-4b9b-bb59-e7afb9c03cb1" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="04cd28cd-29b6-4f94-a540-528d909a52ea" SourceId="1" SourceUrl="http://dantedemon89-001-site1.mywindowshosting.com/goodfolks/Service1.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

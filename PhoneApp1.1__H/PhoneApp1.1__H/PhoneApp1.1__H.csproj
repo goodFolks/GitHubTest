@@ -180,18 +180,22 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logo3.png" />
     <Content Include="README_FIRST.txt" />
-    <None Include="Service References\myService\PhoneApp1._1__H.myService.Event.datasource" />
-    <None Include="Service References\myService\Service11.wsdl" />
-    <None Include="Service References\myService\Service13.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Service References\myService\PhoneApp1._1__H.myService.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <Content Include="Service References\myService\configuration.svcinfo" />
-    <Content Include="Service References\myService\configuration91.svcinfo" />
-    <Content Include="Service References\myService\Reference.svcmap">
+    <None Include="Service References\myService\PhoneApp1._1__H.myService.Member.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\myService\PhoneApp1._1__H.myService.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\myService\Service1.disco" />
+    <None Include="Service References\myService\configuration91.svcinfo" />
+    <None Include="Service References\myService\configuration.svcinfo" />
+    <None Include="Service References\myService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
-    <Content Include="Service References\myService\Service11.disco" />
+    </None>
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
@@ -203,9 +207,17 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="ServiceReferences.ClientConfig">
+    <None Include="Service References\myService\Service1.wsdl" />
+    <None Include="Service References\myService\Service1.xsd">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
+    <None Include="Service References\myService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\myService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
@@ -245,6 +257,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\myService\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
