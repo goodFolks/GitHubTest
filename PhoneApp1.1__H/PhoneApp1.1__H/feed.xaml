@@ -154,15 +154,114 @@
                     </Grid>
                 </controls:PivotItem>
 
+
+
+
+
+
+
+
+
                 <controls:PivotItem >
                     <controls:PivotItem.Header>
                         <TextBlock Text="My Profile" />
                     </controls:PivotItem.Header>
+
                     <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="455" ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+
+                        </Grid.RowDefinitions>
                         <Line StrokeThickness="5" Stroke="White" X1="7" X2="320"
                              Y1="-19" Y2="-19" />
+                        <Grid Margin="0,30,0,0">
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF6D8764"/>
+                                    <GradientStop Color="#FFA8C79D" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+
+
+                            <StackPanel Width="270" Height="250" VerticalAlignment="Top" >
+                                <Border BorderBrush="White" Height="250" BorderThickness="3">
+                                    <Image Source="sm.jpg" Stretch="UniformToFill" />
+                                </Border>
+                            </StackPanel>
+                            <StackPanel VerticalAlignment="Bottom">
+                                <TextBlock Text="Mahmood Al-Basti" FontWeight="SemiBold" FontSize="32" HorizontalAlignment="Center" Foreground="White"  />
+                                <TextBlock FontSize="32" Text="Memeber Since 2016" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="White"  />
+                                <TextBlock FontSize="32" Text="Personal Eevnts 46" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="White" />
+                                <TextBlock FontSize="32" Text="Accumlated Salutes 112" FontWeight="SemiBold"  HorizontalAlignment="Center" Foreground="White"/>
+                                <Border BorderBrush="White" Height="4" BorderThickness="3" />
+                            </StackPanel>
+                        </Grid>
+
+                        <ListBox x:Name="listt2" Grid.Row="1">
+
+
+                            <ListBox.ItemTemplate >
+                                <DataTemplate >
+
+                                    <Border BorderBrush="Gray" BorderThickness="4">
+
+                                        <StackPanel Background="White">
+                                            <StackPanel Width="412" Margin="0,10,30,0">
+                                                <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0">
+                                                    <Image Source="{Binding userImage,Converter={StaticResource ResourceKey=conv}}" Width="90" Height="70" HorizontalAlignment="Left" Stretch="UniformToFill" ></Image>
+
+
+                                                </Border>
+                                                <TextBlock Text="{Binding userName}" FontWeight="ExtraBold" FontSize="25" Height="38" Margin="101,-100,-31,10"  Foreground="Gray" />
+                                                <TextBlock Text="{Binding postTime,Converter={StaticResource ResourceKey=dateConv}}" Foreground="Gray" Margin="105,-35,-31,0" Height="29" TextDecorations="Underline" HorizontalAlignment="Left" Width="343"/>
+                                                <TextBlock Text="{Binding txtContent}"  Foreground="Gray" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="6,0,-31,0" ></TextBlock>
+                                            </StackPanel>
+                                            <Border BorderBrush="Gray" BorderThickness="1" Margin="7">
+                                                <Image Source="{Binding postImage,Converter={StaticResource ResourceKey=conv}}"  Stretch="Fill">
+
+                                                </Image>
+                                            </Border>
+                                            <Border BorderBrush="white" BorderThickness="1">
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Height="35">
+                                                    <Image Source="images/salute.jpg" Width="70" Height="50" Margin="0,-5,0,0"  />
+
+                                                    <TextBlock Margin="-1,3,0,0"><Run Text="{Binding Salutes}" Foreground="Gray" FontSize="25" FontWeight="SemiBold"></Run></TextBlock>
+                                                    <TextBlock Foreground="Gray" Text="{Binding postLocation}" TextWrapping="Wrap" FontSize="14" Width="200" Margin="135,0" TextAlignment="Right"></TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </StackPanel>
+
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+
+
+                        </ListBox >
+
+
+
+
+
+
+
+
+
+
                     </Grid>
                 </controls:PivotItem>
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <controls:PivotItem >
                     <controls:PivotItem.Header>
